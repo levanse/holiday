@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
 </ul>
 <br>
 
-<?= Html::dropDownList('id', $month, $months, ['class' => 'form-control']) ?>
+<?= Html::dropDownList('id', $month, $months, ['id' => 'month-id', 'class' => 'form-control']) ?>
 
 <table class="table table-striped">
     <thead>
