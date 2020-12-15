@@ -3,11 +3,11 @@
 /* @var $this yii\web\View */
 /* @var $month frontend\controllers\MonthController */
 /* @var $vocations common\models\Vocation[] */
+
 /** @var $months frontend\controllers\MonthController[] */
 
 use common\helpers\Constant;
 use yii\helpers\Html;
-use yii\helpers\VarDumper;
 
 $this->title = 'Месяц';
 $this->params['breadcrumbs'][] = $this->title;
@@ -15,16 +15,15 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <ul class="nav nav-tabs">
-    <li role="presentation" class="active"><a href="/month/">Месяц</a></li>
-    <li role="presentation"><a href="/worker/">Ф.И.О.</a></li>
-    <li role="presentation"><a href="/department/">Отделы</a></li>
+    <li class="nav-item"><a class="nav-link active" href="/month/">Месяц</a></li>
+    <li class="nav-item"><a class="nav-link" href="/worker/">Ф.И.О.</a></li>
+    <li class="nav-item"><a class="nav-link" href="/department/">Отделы</a></li>
 </ul>
 <br>
-
 <?= Html::dropDownList('id', $month, $months, ['id' => 'month-id', 'class' => 'form-control']) ?>
-
+<br>
 <table class="table table-striped">
-    <thead>
+    <thead class="thead-dark">
     <tr>
         <th scope="col">#</th>
         <th scope="col">Ф.И.О.</th>
@@ -52,5 +51,3 @@ $this->params['breadcrumbs'][] = $this->title;
 
     </tbody>
 </table>
-
-

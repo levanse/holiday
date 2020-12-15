@@ -45,4 +45,5 @@ return [
         ],
     ],
     'params' => $params,
+    'name' => 'HOLIDAY.loc'
 ];

@@ -7,7 +7,6 @@
 /** @var $workers frontend\controllers\WorkerController[] */
 
 use common\helpers\Constant;
-use yii\helpers\VarDumper;
 use yii\widgets\ActiveForm;
 
 $this->title = 'Ф.И.О';
@@ -16,18 +15,17 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <ul class="nav nav-tabs">
-    <li role="presentation"><a href="/month/">Месяц</a></li>
-    <li role="presentation" class="active"><a href="/worker/">Ф.И.О.</a></li>
-    <li role="presentation"><a href="/department/">Отделы</a></li>
+    <li class="nav-item"><a class="nav-link" href="/month/">Месяц</a></li>
+    <li class="nav-item"><a class="nav-link active" href="/worker/">Ф.И.О.</a></li>
+    <li class="nav-item"><a class="nav-link" href="/department/">Отделы</a></li>
 </ul>
-<br>
 
 <?php $form = ActiveForm::begin(); ?>
-<?= $form->field($model, 'id')->label('Выберите сотрудника')->dropDownList($workers) ?>
+<?= $form->field($model, 'id')->label('')->dropDownList($workers) ?>
 <?php ActiveForm::end(); ?>
 
 <table class="table table-striped">
-    <thead>
+    <thead class="thead-dark">
     <tr>
         <th scope="col">#</th>
         <th scope="col">Вид отпуска</th>

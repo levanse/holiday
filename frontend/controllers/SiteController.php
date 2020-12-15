@@ -1,6 +1,8 @@
 <?php
 namespace frontend\controllers;
 
+use common\helpers\Constant;
+use common\models\Vocation;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;

@@ -29,9 +29,22 @@ $this->params['breadcrumbs'][] = $this->title;
             'name',
             'info',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{update} {delete}',
+                'buttons' => [
+                    'view' => function ($url, $model) {
+                        return Html::a('<span class="fas fa-eye"></span>', ['view', 'id' => $model->id], ['title' => 'Просмотр']);
+                    },
+                    'update' => function ($url, $model) {
+                        return Html::a('<span class="fas fa-pencil-alt"></span>', ['update', 'id' => $model->id], ['title' => 'Редактировать']);
+                    },
+                    'delete' => function ($url, $model) {
+                        return Html::a('<span class="fas fa-trash"></span>', ['delete', 'id' => $model->id], ['title' => 'Удалить', 'data-method' => 'post', 'data-confirm' => "Вы уверены, что хотите удалить?"]);
+                    },
+                ],
+            ],
         ],
     ]); ?>
-
 
 </div>

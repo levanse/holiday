@@ -41,12 +41,15 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '/' => 'site/index',
                 'month/<Month:\w+>' => 'month/index',
                 'worker/<Worker:\w+>' => 'worker/index',
                 'department/<Department:\w+>' => 'department/index',
+                'admin.holiday.loc/' => '/backend/web/'
             ],
         ],
 
     ],
     'params' => $params,
+    'name' => 'HOLIDAY.loc'
 ];
